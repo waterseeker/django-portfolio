@@ -10,7 +10,7 @@ class Technology(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    technologies = models.ManyToManyField(Technology)
+    technologies = models.ManyToManyField(Technology, related_name='technologies')
     image = models.ImageField(upload_to='images/') 
 
     def __str__(self):
