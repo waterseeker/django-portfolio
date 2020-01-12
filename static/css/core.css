@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+  }
+  
+  .navbar {
+    background-color: #003300;
+    color: #c5c5c4;
+  }
+  /* offset the anchor tags so content is not hidden behind the navbar after the page jump*/
+  a.anchor {
+      display: block;
+      position: relative;
+      top: -100px;
+      visibility: hidden;
+  }
+  
+  .text-container {
+    margin-top: 15%;
+  }
+  
+  .section-header {
+    padding: 30px;
+    background-color: #003300;
+    color: #c5c5c4;
+    font-family: 'Playfair Display SC', serif;
+    font-family: 'Archivo Black', sans-serif;
+    margin-left:null;
+  }
+  
+  .project-title {
+    font-size: 1.5em;
+    font-family: 'Playfair Display SC', serif;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  
+  .project-pic {
+    border: 2px solid black;
+    padding: 2em;
+  }
+  
+  .exp-title {
+    font-size: 1.5em;
+    font-family: 'Playfair Display SC', serif;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  
+  .exp-pic {
+    border: 2px solid black
+  }
+  
+  p{
+    font-family: 'Playfair Display SC', serif;
+  }
+  
+  li {
+    font-family: 'Playfair Display SC', serif;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  
+  .contact-container {
+    background-color: #c5c5c4;
+  }
+  
+  .projects-container {
+    background-color: #c5c5c4;
+  }
+  
+  .experience-container {
+    background-color: #eee;
+  }
+  
+  h3 {
+    background-color: #003300;
+    color: #c5c5c4
+  }
+
+  .jumbotron p{
+        font-size: 21px;
+  }

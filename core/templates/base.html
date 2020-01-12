@@ -1,32 +1,45 @@
 {% load static %}
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Playfair+Display+SC" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/core.css' %}">
+        <link href="https://use.fontawesome.com/2d49b25d64.css" media="all" rel="stylesheet">
         {% block extra_head %}{% endblock %}
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'landing_page' %}">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li><a class="nav-link" href="https://www.freecodecamp.org/waterseeker"><i class="fa fa-free-code-camp fa-lg" aria-hidden="true"></i></a></li>
+                        <li><a class="nav-link" href="https://github.com/waterseeker"><i class="fa fa-github-square fa-lg" aria-hidden="true"></i></a></li>
+                        <li><a class="nav-link" href="https://www.linkedin.com/in/wayne-burris-2a655318/"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a></li>
+                        <li><a class="nav-link" href="http://codepen.io/waterseeker/"><i class="fa fa-codepen fa-lg" aria-hidden="true"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
         <div class="container">
-            {% block page_content %}{% endblock %}
+            <div class="jumbotron">
+                {% block page_content %}{% endblock %}
+            </div>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

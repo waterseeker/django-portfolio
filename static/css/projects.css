@@ -3,3 +3,7 @@
     height: 15vw;
     object-fit: cover;
 }
+
+div .card-body{
+    background-color: gainsboro;
+}
