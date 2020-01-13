@@ -4,6 +4,10 @@
     object-fit: cover;
 }
 
+.card-title {
+    font-weight: bold;
+}
+
 div .card-body{
     background-color: gainsboro;
 }

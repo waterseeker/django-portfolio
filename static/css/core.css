@@ -1,7 +1,8 @@
 body {
     background-color: black;
+    font-family: 'Montserrat', sans-serif;
   }
-  
+
   .navbar {
     background-color: #003300;
     color: #c5c5c4;
@@ -13,62 +14,58 @@ body {
       top: -100px;
       visibility: hidden;
   }
-  
+
   .text-container {
     margin-top: 15%;
   }
-  
+
   .section-header {
     padding: 30px;
     background-color: #003300;
     color: #c5c5c4;
-    font-family: 'Playfair Display SC', serif;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-left:null;
   }
-  
+
   .project-title {
     font-size: 1.5em;
-    font-family: 'Playfair Display SC', serif;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
-  
+
   .project-pic {
     border: 2px solid black;
     padding: 2em;
   }
-  
+
   .exp-title {
     font-size: 1.5em;
-    font-family: 'Playfair Display SC', serif;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
-  
+
   .exp-pic {
     border: 2px solid black
   }
-  
+
   p{
-    font-family: 'Playfair Display SC', serif;
+    font-family: 'Montserrat', sans-serif;
   }
-  
+
   li {
-    font-family: 'Playfair Display SC', serif;
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
-  
+
   .contact-container {
     background-color: #c5c5c4;
   }
-  
+
   .projects-container {
     background-color: #c5c5c4;
   }
-  
+
   .experience-container {
     background-color: #eee;
   }
-  
+
   h3 {
     background-color: #003300;
     color: #c5c5c4
@@ -76,4 +73,9 @@ body {
 
   .jumbotron p{
         font-size: 21px;
+  }
+
+  .card-text {
+      font-family: 'Montserrat', sans-serif;
+  {
   }
