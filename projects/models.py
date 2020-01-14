@@ -12,6 +12,7 @@ class Project(models.Model):
     description = models.TextField()
     technologies = models.ManyToManyField(Technology, related_name='projects')
     image = models.ImageField(upload_to='images/')
+    link = models.CharField(max_length=100)
 
     def __str__(self):
         return self.title
