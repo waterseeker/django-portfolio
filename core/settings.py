@@ -18,7 +18,7 @@ ENVIRONMENT = os.getenv("ENVIRONMENT")
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -69,8 +69,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # prod settings 'DIRS': ['django-portfolio/core/templates/', 'django-portfolio/projects/templates/', 'django-portfolio/blog/templates/',],
-        # local and local prod settings 
-        'DIRS': [],
+        'DIRS': ['%s/templates/'% (PROJECT_DIR),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,4 +136,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = '%s/static/' % (BASE_DIR)
