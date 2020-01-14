@@ -14,6 +14,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+ENVIRONMENT = os.getenv("ENVIRONMENT")
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,8 +29,15 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+if ENVIRONMENT != 'prod':
+    DEBUG = True
 
-ALLOWED_HOSTS = ['wayneburris1.pythonanywhere.com']
+if ENVIRONMENT == 'prod':
+    ALLOWED_HOSTS = ['wayneburris1.pythonanywhere.com']
+elif ENVIRONMENT == 'localprod':
+    ALLOWED_HOSTS = ['wayneburris1.pythonanywhere.com', '127.0.0.1']
+else:
+    ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -59,7 +68,9 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['django-portfolio/core/templates/', 'django-portfolio/projects/templates/', 'django-portfolio/blog/templates/',],
+        # prod settings 'DIRS': ['django-portfolio/core/templates/', 'django-portfolio/projects/templates/', 'django-portfolio/blog/templates/',],
+        # local and local prod settings 
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
