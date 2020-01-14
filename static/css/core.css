@@ -7,13 +7,6 @@ body {
     background-color: #003300;
     color: #c5c5c4;
   }
-  /* offset the anchor tags so content is not hidden behind the navbar after the page jump*/
-  a.anchor {
-      display: block;
-      position: relative;
-      top: -100px;
-      visibility: hidden;
-  }
 
   .text-container {
     margin-top: 15%;
@@ -24,7 +17,6 @@ body {
     background-color: #003300;
     color: #c5c5c4;
     font-family: 'Montserrat', sans-serif;
-    margin-left:null;
   }
 
   .project-title {
@@ -72,9 +64,76 @@ body {
   }
 
   .jumbotron p{
-        font-size: 21px;
+    font-size: 21px;
   }
 
   .card-text {
-      font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
+
+  .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #003300;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #48ff00, #7a00ff, blue);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover a:hover {
+    color: #48ff00;
+    animation: glowing 20s linear infinite;
+    transition: color .3s ease-in-out;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #003300;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+a {
+  color: yellowgreen;
+  text-decoration: none;
+}
