@@ -29,12 +29,12 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-if ENVIRONMENT != 'prod':
+if ENVIRONMENT != 'production':
     DEBUG = True
 
-if ENVIRONMENT == 'prod':
+if ENVIRONMENT == 'production':
     ALLOWED_HOSTS = ['wayneburris1.pythonanywhere.com']
-elif ENVIRONMENT == 'localprod':
+elif ENVIRONMENT == 'test':
     ALLOWED_HOSTS = ['wayneburris1.pythonanywhere.com', '127.0.0.1']
 else:
     ALLOWED_HOSTS = []
@@ -68,7 +68,6 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # prod settings 'DIRS': ['django-portfolio/core/templates/', 'django-portfolio/projects/templates/', 'django-portfolio/blog/templates/',],
         'DIRS': ['%s/templates/'% (PROJECT_DIR),],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -131,6 +130,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ()

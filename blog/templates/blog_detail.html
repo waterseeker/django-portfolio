@@ -30,7 +30,7 @@
         <b>{{ comment.author }}</b> wrote:
     </p>
         {% if comment.approved %}
-            <p>{{ comment.body }}</p>
+            <p>{{ comment.body | linebreaks }}</p>
         {% else %}
             <p>Comment pending approval</p>
         {% endif %}

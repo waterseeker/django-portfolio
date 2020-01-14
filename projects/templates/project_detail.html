@@ -8,15 +8,15 @@
             <img src="{{ project.image.url }}" alt="" width="100%">
         </div>
         <div class="col-md-4">
-            <h5>About the project:</h5>
+            <h5>Deets:</h5>
             <p>{{ project.description }}</p>
             <br>
-            <h5>Technology used:</h5>
+            <h5>Techs:</h5>
             {% for technology in technologies %}
                 <p>{{ technology.name }}</p>
             {% endfor %}
-            <h5>Check out the code:</h5>
-            <a href={{ technology.link }}>Code</a>
+            <h5>Codez:</h5>
+            <a href={{ project.link }}>Code</a>
         </div>
     </div>  
 {% endblock %}
