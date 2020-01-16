@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
-    <h1>Blog Index</h1>
+<div class="col-md-10 offset-md-1">
+    <div class="text-center">
+        <h1>All the articles!</h1>
+    </div>
     <hr>
     {% for post in posts %}
-    <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+    <h2 class="glow-on-hover"><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
     <small>
         {{ post.created_on.date }} |&nbsp;
         Categories:&nbsp;
         {% for category in post.categories.all %}
-        <a href="{% url 'blog_category' category.name %}">
+        <a class="glow-on-hover"href="{% url 'blog_category' category.name %}">
             {{ category.name }}
         </a>&nbsp;
         {% endfor %}

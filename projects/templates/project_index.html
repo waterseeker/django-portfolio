@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}My Projects{% endblock %}
+{% block title %}Stuff I've built{% endblock %}
 {% block extra_head %}
     <link rel="stylesheet" href="{% static 'css/projects.css' %}">
 {% endblock %}
 {% block page_content %}
-    <h1>Some of the cool stuff I've built</h1>
+<div>
+    <div class="text-center">
+        <h1>Stuff I've built</h1>
+    </div>
+    <hr>
     <br>
     <div class="row">
         {% for project in projects %}
@@ -13,14 +17,17 @@
                 <div class="card mb-2">
                     <img class="card-img-top" src="{{ project.image.url }}">
                     <div class="card-body">
-                        <h4 class="card-title">{{ project.title }}</h4>
+                        <h4 class="card-title mb-3">{{ project.title }}</h4>
                         <p class="card-text">{{ project.description | truncatechars:150 }}</p>
-                        <button class="btn glow-on-hover">
-                            <a href="{% url 'project_detail' project.pk %}">Read More</a>
-                        </button>
+                        <div class="text-center">
+                            <button class="btn glow-on-hover">
+                                <a href="{% url 'project_detail' project.pk %}">Read More</a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
+</div>
 {% endblock %}
