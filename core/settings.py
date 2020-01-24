@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'projects',
     'blog',
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -137,9 +138,24 @@ USE_TZ = True
 # MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
 # STATIC_ROOT = '%s/static/' % (BASE_DIR)
+# STATICFILES_FINDERS = [
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'sass_processor.finders.CssFinder',
+# ]
 
 # test
 STATIC_URL = '/static/'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
 STATICFILES_DIRS = ('%s/static/' % (BASE_DIR),)
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Django Sass
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
+SASS_PRECISION = 8
+COMPRESS_ROOT = '/static/'

@@ -1,4 +1,5 @@
 {% load static %}
+{% load sass_tags %}
 <html>
     <head>
         <meta charset="UTF-8">
@@ -9,6 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Playfair+Display+SC" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/core.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/fireflies.css' %}"></link> -->
+        <link href="{% sass_src 'css/fireflies.sass' %}" rel="stylesheet" type="text/css" />
         <link href="https://use.fontawesome.com/2d49b25d64.css" media="all" rel="stylesheet">
         {% block extra_head %}{% endblock %}
     </head>
@@ -39,6 +42,48 @@
                 </div>
             </div>
         </nav>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
         <div class="container">
             <div class="jumbotron">
                 {% block page_content %}{% endblock %}
