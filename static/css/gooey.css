@@ -1,0 +1,125 @@
+.text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  color: lightgrey;
+  font-size: 100px;
+  filter: url(#gooey);
+  white-space: nowrap; }
+  .text::before, .text::after {
+    position: absolute;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    filter: blur(5px); }
+  .text::before {
+    content: "inquisitive";
+    animation-name: items-odd; }
+  .text::after {
+    content: "developer";
+    animation-name: items-even;
+    animation-delay: 1.5s; }
+
+@keyframes items-odd {
+  8.33333333% {
+    opacity: 1; }
+  12.5% {
+    opacity: 1; }
+  20.83333333% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  33.33333333% {
+    opacity: 1; }
+  37.5% {
+    opacity: 1; }
+  45.83333333% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  58.33333333% {
+    opacity: 1; }
+  62.5% {
+    opacity: 1; }
+  70.83333333% {
+    opacity: 0; }
+  75% {
+    opacity: 0; }
+  83.33333333% {
+    opacity: 1; }
+  87.5% {
+    opacity: 1; }
+  95.83333333% {
+    opacity: 0; }
+  100% {
+    opacity: 0; }
+  0% {
+    content: "developer"; }
+  24.9999% {
+    content: "developer"; }
+  25% {
+    content: "team builder"; }
+  49.9999% {
+    content: "team builder"; }
+  50% {
+    content: "teacher"; }
+  74.9999% {
+    content: "teacher"; }
+  75% {
+    content: "inquisitive"; }
+  99.9999% {
+    content: "inquisitive"; } }
+
+@keyframes items-even {
+  8.33333333% {
+    opacity: 1; }
+  12.5% {
+    opacity: 1; }
+  20.83333333% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  33.33333333% {
+    opacity: 1; }
+  37.5% {
+    opacity: 1; }
+  45.83333333% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  58.33333333% {
+    opacity: 1; }
+  62.5% {
+    opacity: 1; }
+  70.83333333% {
+    opacity: 0; }
+  75% {
+    opacity: 0; }
+  83.33333333% {
+    opacity: 1; }
+  87.5% {
+    opacity: 1; }
+  95.83333333% {
+    opacity: 0; }
+  100% {
+    opacity: 0; }
+  0% {
+    content: "lifelong learner"; }
+  24.9999% {
+    content: "lifelong learner"; }
+  25% {
+    content: "problem solver"; }
+  49.9999% {
+    content: "problem solver"; }
+  50% {
+    content: "dedicated"; }
+  74.9999% {
+    content: "dedicated"; }
+  75% {
+    content: "developer"; }
+  99.9999% {
+    content: "developer"; } }
+
+/*# sourceMappingURL=gooey.css.map */

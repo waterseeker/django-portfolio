@@ -1,39 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
+{% load sass_tags %}
 {% block title %}Wayne Burris{% endblock %}
-{% block extra_head %}{% endblock %}
+{% block extra_head %}<link href="{% sass_src 'css/gooey.sass' %}" rel="stylesheet" type="text/css" />{% endblock %}
 {% block page_content %}
 <div class="text-center">
-    <h1>< Wayne /></h1>
+    <h1 class="heading">&#60Wayne &#47&#62</h1>
     <hr>
     <br>
-    <div id="demo" class="carousel slide" data-ride="carousel">
-        <!-- The I am slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active align-items-center">
-                <h4>developer</h4>
-            </div>
-            <div class="carousel-item">
-                <h4>lifelong learner</h4>
-            </div>
-            <div class="carousel-item">
-                <h4>dreamer</h4>
-            </div>
-            <div class="carousel-item">
-                <h4>dedicated</h4>
-            </div>
-            <div class="carousel-item">
-                <h4>collaborator</h4>
-            </div>
-            <div class="carousel-item">
-                <h4>teacher</h4>
-            </div>
-        </div>
+    <!-- SVG GOOEY FILTER-->
+    <div class="text">
+        <svg class="text">
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -8" result="gooey"></feColorMatrix>
+                <feComposite in="SourceGraphic" in2="gooey" operator="atop"></feComposite>
+            </filter>
+        </svg>
     </div>
     <br>
-    {% comment %} <div class="row">
-        <div class="col-sm-12"><img class="rounded-circle img-fluid" src="/media/images/wayne_zpsrhdmpcwo.jpeg" alt="Wayne's profile picture"></div>
-    </div> {% endcomment %}
     <div class="row">  
         <div class="col-sm-12 text-container">
             <p>Let's build something together.</p>
