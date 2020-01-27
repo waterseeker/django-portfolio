@@ -18,6 +18,7 @@ body
   height: 0.4vw
   margin: -0.2vw 0 0 9.8vw
   animation: ease 10000s alternate infinite
+  -webkit-animation: ease 10000s alternate infinite
   pointer-events: none
 
   &::before,
@@ -28,17 +29,20 @@ body
     height: 100%
     border-radius: 50%
     transform-origin: -10vw
+    -webkit-transform-origin: -10vw
   
   &::before
     background: transparent 
     opacity: 0.4
     animation: drift ease alternate infinite
+    -webkit-animation: drift ease alternate infinite
   
   &::after
     background: white
     opacity: 0
     box-shadow: 0 0 0vw 0vw white
     animation: drift ease alternate infinite, flash ease infinite
+    -webkit-animation: drift ease alternate infinite, flash ease infinite
 
   
 // Randomize Fireflies Motion
@@ -49,18 +53,27 @@ body
   
   .firefly:nth-child(#{$i})
     animation-name: move#{$i}
+    -webkit-animation-name: move#{$i}
 
     &::before
       animation-duration: #{$rotationSpeed}
+      -webkit-animation-duration: #{$rotationSpeed}
 
     &::after
       animation-duration: #{$rotationSpeed}, random(6000) + 5000ms
       animation-delay: 0ms, random(8000) + 500ms
+      -webkit-animation-duration: #{$rotationSpeed}, random(6000) + 5000ms
+      -webkit-animation-delay: 0ms, random(8000) + 500ms
 
   @keyframes move#{$i}
     @for $step from 0 through $steps
       #{$step * (100 / $steps)}%
         transform: translateX(random(100) - 50vw) translateY(random(100) - 50vh) scale(random(75) / 100 + .25)
+
+  @-webkit-keyframes move#{$i}
+    @for $step from 0 through $steps
+      #{$step * (100 / $steps)}%
+        -webkit-transform: translateX(random(100) - 50vw) translateY(random(100) - 50vh) scale(random(75) / 100 + .25)
 
 @keyframes drift
   0%
@@ -68,7 +81,21 @@ body
   100%
     transform: rotate(360deg)
 
+@-webkit-keyframes drift
+  0%
+    -webkit-transform: rotate(0deg)
+  100%
+    -webkit-transform: rotate(360deg)
+
 @keyframes flash
+  0%, 30%, 100%
+    opacity: 0
+    box-shadow: 0 0 0vw 0vw ghostwhite
+  5%
+    opacity: 1
+    box-shadow: 0 0 2vw 0.4vw ghostwhite
+
+@-webkit-keyframes flash
   0%, 30%, 100%
     opacity: 0
     box-shadow: 0 0 0vw 0vw ghostwhite
