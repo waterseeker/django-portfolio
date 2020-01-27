@@ -4,12 +4,12 @@
 {% block title %}Wayne Burris{% endblock %}
 {% block extra_head %}<link href="{% sass_src 'css/gooey.sass' %}" rel="stylesheet" type="text/css" />{% endblock %}
 {% block page_content %}
-<div class="text-center">
-    <h1 class="heading">&#60Wayne &#47&#62</h1>
+<div class="grid-container text-center">
+    <h1 class="heading grid-item">&#60Wayne &#47&#62</h1>
     <hr>
     <br>
     <!-- SVG GOOEY FILTER-->
-    <div class="text">
+    <div class="text grid-item">
         <svg class="text">
             <filter id="gooey">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"></feGaussianBlur>
@@ -18,11 +18,10 @@
             </filter>
         </svg>
     </div>
-    <br>
-    <div class="row">  
-        <div class="col-sm-12 text-container">
+
+        <div class="text-container">
             <p>Let's build something together.</p>
         </div>
-    </div>
+
 </div>
 {% endblock %}

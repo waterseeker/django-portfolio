@@ -5,7 +5,8 @@
   color: lightgrey;
   font-size: 100px;
   filter: url(#gooey);
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin: auto; }
   .text::before, .text::after {
     position: absolute;
     opacity: 0;
