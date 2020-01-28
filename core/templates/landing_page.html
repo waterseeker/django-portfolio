@@ -2,24 +2,11 @@
 {% load static %}
 {% load sass_tags %}
 {% block title %}Wayne Burris{% endblock %}
-{% block extra_head %}<link href="{% sass_src 'css/gooey.sass' %}" rel="stylesheet" type="text/css" />{% endblock %}
+{% block extra_head %}{% endblock %}
 {% block page_content %}
-<div class="grid-container text-center">
-    <h1 class="heading grid-item">&#60Wayne &#47&#62</h1>
-    <hr>
-    <br>
-    <!-- SVG GOOEY FILTER-->
-    <div class="text grid-item">
-        <svg class="text">
-            <filter id="gooey">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"></feGaussianBlur>
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -8" result="gooey"></feColorMatrix>
-                <feComposite in="SourceGraphic" in2="gooey" operator="atop"></feComposite>
-            </filter>
-        </svg>
-    </div>
-    <div class="text-container">
-        <p>Let's build something together.</p>
-    </div>
+<div class="grid text-center">
+    <div class="heading">&#60Wayne &#47&#62</div>
+    <span id="changingword"></span>
+    <div class="tagline">Let's build something together.</div>
 </div>
 {% endblock %}

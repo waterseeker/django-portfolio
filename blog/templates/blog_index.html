@@ -7,17 +7,19 @@
     </div>
     <hr>
     {% for post in posts %}
-    <h2 class="glow-on-hover"><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
-    <small>
-        {{ post.created_on.date }} |&nbsp;
-        Categories:&nbsp;
-        {% for category in post.categories.all %}
-        <a class="glow-on-hover"href="{% url 'blog_category' category.name %}">
-            {{ category.name }}
-        </a>&nbsp;
-        {% endfor %}
-    </small>
-    <p>{{ post.body | linebreaks | slice:":200" }}...</p>
+        <div class="grid">
+            <h4 class="glow-on-hover"><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h4>
+            <small>
+                {{ post.created_on.date }} |&nbsp;
+                Categories:&nbsp;
+                {% for category in post.categories.all %}
+                <a class="glow-on-hover"href="{% url 'blog_category' category.name %}">
+                    {{ category.name }}
+                </a>&nbsp;
+                {% endfor %}
+            </small>
+            <p>{{ post.body | linebreaks | slice:":200" }}...</p>
+        </div>
     {% endfor %}
 </div>
 {% endblock %}

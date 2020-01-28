@@ -2,6 +2,7 @@ asgiref==3.2.3
 Django==3.0.2
 django-appconf==1.0.3
 django-compressor==2.4
+django-jquery==3.1.0
 django-sass-processor==0.8
 libsass==0.19.4
 Pillow==7.0.0

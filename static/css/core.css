@@ -22,10 +22,10 @@ body {
 }
 .jumbotron {
   background: transparent;
-  color: green;
+  color: #c5c5c4;
 }
 .jumbotron p{
-  font-size: 21px;
+  font-size: 2vw;
 }
 .card-text {
   font-family: 'Montserrat', sans-serif;
@@ -35,7 +35,10 @@ body {
   background: transparent;
 }
 .heading {
-  font-size: 100px;
+  font-size: 6vw;
+}
+.tagline {
+  font-size: 4vw;
 }
 .glow-on-hover {
   height: 75px;
@@ -132,4 +135,34 @@ div .card-body{
 }
 .card-text {
     color: #c5c5c4;
+}
+/* grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: auto; 
+  grid-template-rows: auto, auto, auto;
+  grid-row-gap: ;
+}
+/* changing words on landing page */
+#changingword {
+  font-size: 5vw;
+}
+#changingword:after {
+  content:"";
+  -webkit-animation: spin 20s linear infinite;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% { content: "developer"; }
+  10% { content: "inquisitive"; }
+  20% { content: "team builder"; }
+  30% { content: "lifelong learner"; }
+  40% { content: "driven"; }
+  50% { content: "problem solver"; }
+  60% { content: "dedicated"; }
+  70% { content: "agile"; }
+  80% { content: "teacher"; }
+  90% { content: "passionate"; }
+  100% { content: "developer"; }
 }
