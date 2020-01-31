@@ -9,14 +9,14 @@
     </div>
     <hr>
     <br>
-    <div class="row">
+    <div class="grid">
         {% for project in projects %}
-            <div class="col-md-4">
-                <div class="card mb-2">
-                    <img class="card-img-top" src="{{ project.image.url }}">
-                    <div class="card-body">
-                        <h4 class="card-title mb-3">{{ project.title }}</h4>
-                        <p class="card-text">{{ project.description | truncatechars:150 }}</p>
+            <div>
+                <div>
+                    <img class="card-img-top mb-3" src="{{ project.image.url }}">
+                    <div>
+                        <h4>{{ project.title }}</h4>
+                        <p>{{ project.description | truncatechars:150 }}</p>
                         <div class="text-center">
                             <button class="btn glow-on-hover">
                                 <a href="{% url 'project_detail' project.pk %}">Read More</a>
