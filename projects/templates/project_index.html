@@ -13,14 +13,14 @@
         {% for project in projects %}
             <div>
                 <div>
+                    <h2>{{ project.title }}</h2>
                     <img class="card-img-top mb-3" src="{{ project.image.url }}">
                     <div>
-                        <h4>{{ project.title }}</h4>
                         <p>{{ project.description | truncatechars:150 }}</p>
                         <div class="text-center">
-                            <button class="btn glow-on-hover">
-                                <a href="{% url 'project_detail' project.pk %}">Read More</a>
-                            </button>
+                            <a href="{% url 'project_detail' project.pk %}">
+                                <button class="btn glow-on-hover">Read More</button>
+                            </a>
                         </div>
                     </div>
                 </div>

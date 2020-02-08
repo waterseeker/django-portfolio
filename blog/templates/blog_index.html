@@ -8,7 +8,7 @@
     <hr>
     {% for post in posts %}
         <div class="grid">
-            <h4 class="glow-on-hover"><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h4>
+            <h2 class="glow-on-hover"><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
             <small>
                 {{ post.created_on.date }} |&nbsp;
                 Categories:&nbsp;

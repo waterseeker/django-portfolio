@@ -1,3 +1,16 @@
+/* Example of CSS variables
+:root {
+  --main-bg-color: coral;
+  --main-txt-color: blue;
+  --main-padding: 15px;
+}
+
+#div1 {
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);
+  padding: var(--main-padding);
+} */
+
 body {
   background-color: black;
   font-family: 'Montserrat', sans-serif;
@@ -24,9 +37,6 @@ body {
   background: transparent;
   color: #c5c5c4;
 }
-.jumbotron p{
-  font-size: 2vw;
-}
 .card-text {
   font-family: 'Montserrat', sans-serif;
   color: black;
@@ -43,7 +53,7 @@ body {
 .glow-on-hover {
   border: none;
   outline: none;
-  color: #003300;
+  color: #a09be7;
   background: transparent; 
   cursor: pointer;
   position: relative;
@@ -140,7 +150,7 @@ div .card-body{
   display: grid;
   grid-template-columns: auto; 
   grid-template-rows: auto, auto, auto;
-  grid-row-gap: ;
+  grid-row-gap: 4px;
 }
 /* changing words on landing page */
 #changingword {
