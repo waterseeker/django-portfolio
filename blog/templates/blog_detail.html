@@ -29,7 +29,7 @@
         On {{comment.created_on.date }}&nbsp;
         <b>{{ comment.author }}</b> wrote:
     </p>
-        {% if comment.approved %}
+        {% if comment.approved %}-m 
             <p>{{ comment.body|linebreaks }}</p>
         {% else %}
             <p>Comment pending approval</p>
